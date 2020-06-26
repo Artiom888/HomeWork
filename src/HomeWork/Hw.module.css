@@ -1,0 +1,33 @@
+.content {
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    background: darkolivegreen;
+    height: 65px;
+    width: 250px;
+}
+.content::after, .content::before {
+    content: '';
+    position: absolute;
+    right: 250px; bottom: 0px;
+    z-index: -1;
+    border: 20px solid transparent;
+    border-right: 20px solid darkolivegreen;
+    border-bottom: 20px solid darkolivegreen;
+}
+.content::before {
+    z-index: 1;
+    box-shadow: none;
+}
+
+.name {
+    color: red;
+}
+
+.message {
+    color: yellow;
+}
+.time {
+    padding-left: 200px;
+    color: black;
+}

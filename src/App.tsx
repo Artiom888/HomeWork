@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import HomeWork from "./HomeWork/Hw";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+        <div className={"wrapper"}>
+            <header>
+                <h1>Homework</h1>
+            </header>
+            <img src={"https://pixelbox.ru/wp-content/uploads/2018/02/anonymous_steam_avatars-1-1.jpg"} />
+            <div className={'content'}>
+                <HomeWork message={"npm start нажимал?"} name={"Артём"} time={"20:00"}/>
+            </div>
+        </div>
+    );
 }
 
 export default App;
