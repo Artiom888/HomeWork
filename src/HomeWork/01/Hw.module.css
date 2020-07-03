@@ -9,15 +9,11 @@
 .content::after, .content::before {
     content: '';
     position: absolute;
-    right: 250px; bottom: 0px;
-    z-index: -1;
+    left: -10px;
+    bottom: 0px;
     border: 20px solid transparent;
     border-right: 20px solid darkolivegreen;
     border-bottom: 20px solid darkolivegreen;
-}
-.content::before {
-    z-index: 1;
-    box-shadow: none;
 }
 
 .name {
