@@ -2,12 +2,19 @@ import React, {useState} from 'react';
 import "./App.css";
 import HomeWork from "./HomeWork/01/Hw";
 import HomeWork2 from "./HomeWork/02/Hw2";
+import HomeWork3 from "./HomeWork/03/Hw3";
+import {v1} from "uuid";
 
 
 export type ListsType = {
     id: number
     n: string
     p: string
+}
+
+export type NamesType = {
+    id: string
+    name: string
 }
 
 export type FilterValuesType = "all" | "low" | "middle" | "high";
@@ -44,6 +51,10 @@ function App() {
         listsForHomework2 = lists.filter(l => l.p === "low")
     }
 
+
+
+
+
     return (
         <div className={"wrapper"}>
             <header>
@@ -60,6 +71,12 @@ function App() {
                     lists={listsForHomework2}
                     removeList={removeList}
                     changeFilter={changeFilter}/>
+            </div>
+            <div>
+                <HomeWork3
+                    title={"HomeWork3"}
+
+                    />
             </div>
         </div>
     );
