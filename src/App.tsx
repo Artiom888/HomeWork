@@ -3,18 +3,13 @@ import "./App.css";
 import HomeWork from "./HomeWork/01/Hw";
 import HomeWork2 from "./HomeWork/02/Hw2";
 import HomeWork3 from "./HomeWork/03/Hw3";
-import {v1} from "uuid";
+
 
 
 export type ListsType = {
     id: number
     n: string
     p: string
-}
-
-export type NamesType = {
-    id: string
-    name: string
 }
 
 export type FilterValuesType = "all" | "low" | "middle" | "high";

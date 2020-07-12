@@ -6,6 +6,10 @@ type HomeWork3Type = {
     title: string
 
 }
+type NamesType = {
+    id: string
+    name: string
+}
 
 function HomeWork3(props: HomeWork3Type) {
 
@@ -19,18 +23,18 @@ function HomeWork3(props: HomeWork3Type) {
 
     function greetingEnterPressed(e: KeyboardEvent) {
         if (e.key === "Enter") {
-            alert(`Hello!!! ${hz}`)
-            setHz("");
+            greeting()
         }
 
     }
 
-    function reguired() {
-        const empt = hz;
-        if (empt === "") {
+    function greeting() {
+
+        if (hz === "") {
             alert("Error");
         } else {
             alert(`Hello!!! ${hz}`);
+            addName(hz)
         }
 
         setHz("");
@@ -38,13 +42,13 @@ function HomeWork3(props: HomeWork3Type) {
 
 
 
-    function addName() {
-
-        let newName = {id: v1(), name: hz};
+    function addName(name: string) {
+        let newName = {id: v1(), name: name};
         let newNames = [newName, ...names];
         setNames(newNames);
-        console.log(names.length + 1)
+
     }
+
 
 
     return (
@@ -60,7 +64,7 @@ function HomeWork3(props: HomeWork3Type) {
                 onKeyPress={greetingEnterPressed}
 
             />
-            <button onClick={reguired} >l
+            <button onClick={greeting} >Send
             </button>
             <span>
                 count name: {names.length}
